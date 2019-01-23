@@ -23,7 +23,6 @@
     <canvas id="myCanvas" width="480" height="320"></canvas>
 
     <script>
-        var interval = setInterval(draw, 10);
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
         var ballRadius = 10;
@@ -52,8 +51,8 @@
             }
         }
 
-        document.addEventListener('keydown', keyDownHandler, false);
-        document.addEventListener('keyup', keyUpHandler, false);
+        document.addEventListener("keydown", keyDownHandler, false);
+        document.addEventListener("keyup", keyUpHandler, false);
 
         function keyDownHandler(e) {
             if (e.key == "Right" || e.key == "ArrowRight") {
@@ -73,7 +72,6 @@
             }
         }
 
-
         function drawBall() {
             ctx.beginPath();
             ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
@@ -88,7 +86,6 @@
             ctx.fill();
             ctx.closePath();
         }
-
         function drawBricks() {
             for (var c = 0; c < brickColumnCount; c++) {
                 for (var r = 0; r < brickRowCount; r++) {
@@ -142,9 +139,6 @@
         }
 
         var interval = setInterval(draw, 10);
-
-
-
     </script>
 
 </body>
