@@ -3,7 +3,7 @@
 
 <head>
     <meta charset='utf-8' />
-    <title>Gamedev Canvas Workshop</title>
+    <title>Brick Destroyer</title>
     <style>
         * {
             padding: 0;
@@ -16,6 +16,10 @@
             margin: 0 auto;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">s
 </head>
 
 <body>
@@ -103,7 +107,7 @@
         function drawBall() {
             ctx.beginPath();
             ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-            ctx.fillStyle = '#0095DD';
+            ctx.fillStyle = "fa fa-globe";
             ctx.fill();
             ctx.closePath();
         }
@@ -124,7 +128,7 @@
                         bricks[c][r].y = brickY;
                         ctx.beginPath();
                         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                        ctx.fillStyle = '#0095DD';
+                        ctx.fillStyle = '#9932CC';
                         ctx.fill();
                         ctx.closePath();
                     }
@@ -133,12 +137,12 @@
         }
         function drawScore() {
             ctx.font = '16px Arial';
-            ctx.fillStyle = '#0095DD';
+            ctx.fillStyle = '#000000';
             ctx.fillText('Score: ' + score, 8, 20);
         }
         function drawLives() {
             ctx.font = '16px Arial';
-            ctx.fillStyle = '#0095DD';
+            ctx.fillStyle = '#000000';
             ctx.fillText('Lives: ' + lives, canvas.width - 65, 20);
         }
 
@@ -191,6 +195,12 @@
 
         draw();
     </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 
 </body>
 
